@@ -1,4 +1,4 @@
-# Breast Cancer MLOps API (Module 7, Track 2)
+# Breast Cancer MLOps API
 
 Production-style modular FastAPI covering Sessions 1–5 + continual retraining.
 
