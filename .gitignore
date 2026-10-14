@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+mlruns/
+*.joblib
+data/feedback.db
+data/datasets/dataset_v*.csv
+!data/datasets/.gitkeep
+uv.lock

@@ -1,0 +1,19 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      REDIS_HOST: host.docker.internal
+      REDIS_PORT: 6379
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on: []
+  worker:
+    build: .
+    command: python -m app.services.retrain_worker
+    environment:
+      REDIS_HOST: host.docker.internal
+      REDIS_PORT: 6379
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
